@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- JS Link -->
+    <script src="./script.js" defer></script>
+    <script src="./ui.js" defer></script>
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"/>
+    <!-- Other -->
+     <link rel="icon" type="image/png" href="../MinesweeperFavicon.png">
+    <title>Simple Snake</title>
+</head>
+<body>
+    <header>
+        <button class="btn" onclick="backToHome()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1150 960 960" width="24px" fill="#e3e3e3"><path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"/></svg>Back</button>
+        <button class="btn" style="background-color: rgb(51, 51, 51); margin-left: 20px;" onclick="sizeChange()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1150 960 960" width="24px" fill="#FFFFFF"><path d="M686-132 444-376q-20 8-40.5 12t-43.5 4q-100 0-170-70t-70-170q0-36 10-68.5t28-61.5l146 146 72-72-146-146q29-18 61.5-28t68.5-10q100 0 170 70t70 170q0 23-4 43.5T584-516l244 242q12 12 12 29t-12 29l-84 84q-12 12-29 12t-29-12Zm29-85 27-27-256-256q18-20 26-46.5t8-53.5q0-60-38.5-104.5T386-758l74 74q12 12 12 28t-12 28L332-500q-12 12-28 12t-28-12l-74-74q9 57 53.5 95.5T360-440q26 0 52-8t47-25l256 256ZM472-488Z"/></svg> Edit Size</button>
+        <h3>Simple Minesweeper</h3>
+        <p style="padding: 5px; margin-top: 8px;">v2.1.a</p>
+    </header>
+    <div id="main">
+        <section id="game">
+            <div id="game_screen">
+                <div style="margin-bottom: 30px">
+        <p style="display: inline" id="flag">
+          <span style="color: rgb(255, 0, 0); display: inline">F</span>
+          <span id="flagAmount" style="display: inline; margin-right: 30px"
+            >0</span
+          >
+        </p>
+      </div>
+                <div id="gameArea">
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

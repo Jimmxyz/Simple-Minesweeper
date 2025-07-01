@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../../MinesweeperFavicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Simple Minesweeper | Game Win</title>
+</head>
+<body>
+    <script>
+        function backToHome(){
+            window.location.replace("../index.html");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            let sec = 10
+            setInterval(() => {
+                document.getElementById('time').innerHTML = sec+"s"
+                if(sec === 0 || sec < 0){
+                    window.location.replace("../index.html");
+                }
+                sec--;
+            }, 1000)
+        })  
+
+                document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+    if ((keyName === "Enter")) {
+      window.location.replace("../index.html");
+    }},
+  false
+);
+ </script>
+    <div id="menu">
+        <h1 style="margin-top: 21.44px;">Game Win !</h1>
+        <button class="btn" onclick="backToHome()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M240-40v-329L110-580l185-300h370l185 300-130 211v329l-240-80-240 80Zm80-111 160-53 160 53v-129H320v129Zm20-649L204-580l136 220h280l136-220-136-220H340Zm98 383L296-558l57-57 85 85 169-170 57 56-226 227ZM320-280h320-320Z"/></svg>Continue</button>
+        <p id="time">10s</p>
+</body>
+</html>

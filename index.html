@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game/style.css">
+    <link rel="icon" type="image/png" href="MinesweeperFavicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Simple Minesweeper</title>
+</head>
+<body>
+    <script>
+        function newGame(){
+            window.location.replace("./game/");
+        }
+        function chess(){
+            window.location.replace("https://jimmxyz.github.io/SimpleChess/");
+        }
+        function clearData(){
+            if(confirm("Are you sure to delete your data ?\n\nThe following data will be erased :\n- High Score")){
+                localStorage.clear()
+                alert("Your data was succesfuly erased.")
+            }
+        }
+        document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+    if ((keyName === "Enter")) {
+      window.location.replace("./game/game.html");
+    }},
+  false
+);
+
+window.addEventListener("gamepadconnected", function(e) {
+    var gp = navigator.getGamepads()[e.gamepad.index];
+   });
+  setInterval(function() {
+    var gamepads = navigator.getGamepads();
+    for (var i = 0; i < gamepads.length; i++) {
+      var gp = gamepads[i];
+      if (gp) {
+        gp.buttons.forEach(function(button, index) {
+          if (button.pressed) {
+            if(index === 0){
+                window.location.replace("./game/game.html");
+            }
+          }
+        });
+      }
+    }
+  }, 100);
+    </script>
+    <div id="menu">
+        <img src="MinesweeperFavicon.png" style="image-rendering: pixelated; border-radius: 5px;" width="75" height="75">
+        <h1 style="margin-top: 21.44px;">Simple Minesweeper</h1>
+        <button class="btn" onclick="newGame()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1150 960 960" width="24px" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>New Game</button>
+        <p></p>
+        <br>
+        <h3>Also try :</h3>
+        <button class="btn" style="background-color: rgb(75, 75, 75) ;" onclick="chess()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1150 960 960" width="24px" fill="#e3e3e3"><path d="M160-80v-200q88-60 129-125t56-115H240v-80h90q-14-22-22-47t-8-53q0-75 52.5-127.5T480-880q75 0 127.5 52.5T660-700q0 28-8 53t-22 47h90v80H615q15 50 56 115t129 125v200H160Zm80-80h480v-80q-92-72-133-148.5T532-520H428q-14 55-55 131.5T240-240v80Zm240-440q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm0 440Zm0-540Z"/></svg></svg>Simple Chess</button>
+        <p></p>
+    </div>
+    <p id="credit">Originaly Created by Jimmy, skykiller099 and Ravage (<a href="https://github.com/Jimmxyz">@Jimmxyz</a> , <a href="https://github.com/skykiller099">@skykiller099</a> and <a href="https://github.com/RavageX33A">@RavageX33A</a> on Github)<br> UI and some features revamped by Jimmy to be publishable on GitHub Pages and become open source.<br>This minesweeper game is an free and open source program <br id="br-credit">(the code is available on Github: <a href="https://github.com/Jimmxyz/Simple-Minesweeper">see the repository here</a>) under the <a href="https://github.com/Jimmxyz/Simple-Minesweeper/blob/main/LICENSE">MIT license</a></p>
+</body>
+</html>

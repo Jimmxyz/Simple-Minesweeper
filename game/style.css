@@ -1,0 +1,346 @@
+
+body{
+    background-color: rgb(52, 52, 52);
+}
+h1{
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+h2{
+    color: rgb(255, 255, 255);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+    padding: 20px;
+}
+h3{
+    color: rgb(255, 255, 255);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+      padding: 5px;
+      margin: 5px;
+      margin-left: 15px;
+}
+h4{
+    color: rgb(255, 255, 255);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+    padding: 20px;
+}
+h5{
+    color: rgb(255, 255, 255);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+    padding: 20px;
+}
+p{
+    color: rgb(157, 157, 157);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+a:visited{
+    color: rgb(157, 157, 157);
+}
+a{
+    color: rgb(157, 157, 157);
+}
+a:hover{
+    color: rgb(109, 109, 225);
+}
+#menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    align-content: center;
+}
+#menuSetUp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    align-content: center;
+}
+header{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 41px;
+    background-image:
+        linear-gradient(280deg, 
+            transparent 0%, 
+            rgba(75, 75, 75, 0.2) 50%,
+            rgba(75, 75, 75, 0.4) 60%,
+            rgba(75, 75, 75, 0.6) 70%,
+            rgba(75, 75, 75, 0.8) 80%,
+            rgba(75, 75, 75, 1.0) 90%
+        ),
+        url('../MinesweeperFavicon.png');    background-color: rgb(75, 75, 75);
+    background-size: 120px;
+    image-rendering: pixelated;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: ease 0.2s;
+    margin-bottom: 0px;
+}
+header:hover{
+    background-size: 200px;
+    transition: ease 0.2s;
+}
+.btn{
+    background-color: rgb(81, 81, 227);
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: larger;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+#nameArea{
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 10px;
+    color: rgb(0, 0, 0);
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: larger;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#nameArea:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+#nameArea:focus{
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgb(81, 81, 227);
+    outline: none;
+}
+#credit{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+#br-credit{
+    display: none;
+}
+@media (min-width: 850px) and (max-width: 1035px) {
+    #credit{
+        font-size: small;
+        font-weight: 600;
+    }
+}
+@media (min-width: 700px) and (max-width: 850px) {
+    #credit{
+        font-size: x-small;
+        font-weight: 500;
+    }
+}
+@media (max-width: 700px) {
+    #credit{
+        font-size: xx-small;
+        font-weight: 400;
+    }
+    #br-credit{
+        display: inline;
+    }
+}
+/* Game CSS : */
+#game{
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    max-height: 100%;
+    box-sizing: border-box;
+    scale: 1;
+    margin-top: 0px;
+    scale: 0.85;
+}
+#flag{
+    margin-top: 0px;
+}
+#game_screen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 2;
+  position: relative;
+  box-sizing: border-box;
+
+}
+#gameArea {
+  background: none;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 50px rgba(35, 120, 25, 0.8);
+  border-radius: 10px;
+      box-sizing: border-box;
+}
+.col {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+      box-sizing: border-box;
+}
+.cell {
+  height: 20px; /* Taille de cellule par défaut, sera probablement ajustée par ui.js */
+  cursor: default;
+  user-select: none;
+  text-align: center;
+  display: flex; /* Utilisé pour centrer le contenu comme un nombre ou un drapeau */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  font-weight: 800;
+  box-sizing: border-box;
+  border-color: rgb(150, 109, 55) !important;
+  aspect-ratio: 1 / 1;
+  transition: opacity 0.2s ease;
+font-family: "JetBrains Mono", monospace;
+  
+}
+.cell:hover {
+  opacity: 80%;
+}
+#COL0CELL19{
+    border-bottom-left-radius: 5px;
+}
+#COL0CELL0{
+    border-top-left-radius: 5px;
+}
+#COL19CELL19{
+    border-bottom-right-radius: 5px;
+}
+#COL19CELL0{
+    border-top-right-radius: 5px;
+}
+#scoreShow{
+    text-align: center;
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+}
+#highScoreShow{
+    text-align: center;
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+    padding: 2px;
+}
+#keyIcon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media (max-width: 1250px) {
+    #game_info{
+        display: none;
+    }
+    #game_info_mobile{
+        display: block;
+    }
+    #game{
+        max-height: 50%;
+    }
+}
+@media (max-width: 450px) {
+    #game_info{
+        display: none;
+    }
+    #game_info_mobile{
+        display: block;
+    }
+    #game{
+        max-height: 35%;
+    }
+}
+#main{ 
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+#show{
+    display: none;
+}
+#setup{
+    display: none;
+}
+#preview{
+    display: none;
+    scale: 0.6;
+    padding: 30px;
+    border: 2px solid #ffffff ;
+    border-radius: 5px;
+    margin-top: -90px;
+}
+#previewBTN{
+    display: none;
+}
+#share{
+    display: none;
+}
+#link{
+    margin-top: -60px;
+    display: none;
+}
+#shareIT{
+    display: none;
+    background-color: rgb(75,75,75);
+}
