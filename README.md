@@ -1,6 +1,8 @@
 # Simple-Minesweeper
 A simple minesweeper in js
 
+You can also try the CLI version : <a href='https://github.com/Jimmxyz/Minesweeper-CLI'>https://github.com/Jimmxyz/Minesweeper-CLI</a>
+
 # Try it now
 
 You can play it now on github pages : <a href="https://jimmxyz.github.io/Simple-Minesweeper/">https://jimmxyz.github.io/Simple-Minesweeper/</a>
